@@ -31,24 +31,105 @@ p {
     margin-bottom: 40px;
 }
 
+/* applies to all the buttons */
 .custom-btn {
-    width: 130px;
-    height: 40px;
-    color: #000;
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: transparent;
     cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
     display: block;
-    margin: 0 auto 20px; /* Center and add margin to stack vertically */
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-        7px 7px 20px 0px rgba(0, 0, 0, .1),
-        4px 4px 5px 0px rgba(0, 0, 0, .1);
-    outline: none;
+    margin: 0 auto 40px; 
+    /* Center and add margin to stack vertically */
 }
 
-/* Add your custom styles for btn-1, btn-2, and btn-3 */
+.btn-1 {
+    width: 100px;
+    height: 50px;/*Adjusts height of the circle */
+    border-radius: 50%;
+    border: none;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+}
+.btn-1:hover {
+  color: #FFFFFF;
+  border: 1.5px outset #f44336;
+  transition: width 0.4s ease, height 0.4s ease, background-color 1s ease;
+  width: 110px;
+  height: 55px;
+  background: rgb(0,3,255);
+  background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 50%);
+ box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.btn-1 {
+  animation: bounce 2s infinite;
+}
+
+.btn-2 {
+    width: 100px;
+    height: 40px;
+    background-color: Yellow;
+    border: 2px groove #9C27B0;
+}
+
+.btn-2:hover {
+  color: #FF0000;
+  border: 2px double #FF5722;
+  background: #4dccc6;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+/* Click effect */
+.btn-2:active {
+  background-color: #003f7f;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.btn-2 {
+  animation: slideIn 3s infinite;
+}
+
+.btn-3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;/*encloses the corners of the shape */
+    background-color: red;
+    border: 2px solid #FFC107;  
+}
+
+.btn-3:hover {
+  color: #f0094a;
+  background: transparent;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(0, 0, 255, 0.5);
+  animation: pulse 0.6s infinite;
+}
+/* Click effect */
+.btn-3:active {
+  background-color: #000000;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  
+ }
